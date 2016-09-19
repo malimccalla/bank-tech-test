@@ -20,7 +20,7 @@ describe Bank do
     end
 
     it 'doesnt allow for the deposit of negitive funds' do
-      expect{bank.deposit(-10)}.to raise_error "Can not deposit negative funds."
+      expect{bank.deposit(-10)}.to raise_error "Can not deal with negative funds."
     end
 
   end
@@ -28,7 +28,7 @@ describe Bank do
   describe '#withdraw' do
 
     it 'doesnt allow for the withdrawal of negative funds' do
-      expect{bank.withdraw(-10)}.to raise_error "Can not withdraw negative funds."
+      expect{bank.withdraw(-10)}.to raise_error "Can not deal with negative funds."
     end
 
     context 'when no money in account' do
